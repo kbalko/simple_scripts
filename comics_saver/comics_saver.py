@@ -25,8 +25,8 @@ while not url.endswith('1'):
         res.raise_for_status()
 
     image_file = open(os.path.join('comics', os.path.basename(comic_url)), 'wb')
-    for chunk in res.iter_content(100000):
-        image_file.write(chunk)
+    for elem in res.iter_content(100000):
+        image_file.write(elem)
     image_file.close()
     prev_link = soup.select('a[rel="prev"]')[0]
     url = xkcd + prev_link.get('href')
