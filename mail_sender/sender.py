@@ -31,7 +31,7 @@ smtp_obj.login(your_email, password)  #  credencials
 for name, email in unpaid.items():
     body = u"Subject: Zaległa wpłata za %s.\nCześć, %s!\nPrzypominam o zaległej wpłacie za %s" % (last_month, name, last_month)
     print(u"Wysłanie wiadomości e-mail na adres %s" % email)
-    sendmail_status = smtp_obj.sendmail('drybrushlands@gmail.com', email, body.encode('utf-8'))
+    sendmail_status = smtp_obj.sendmail(your_email, email, body.encode('utf-8'))
     if sendmail_status != {}:
         print(u"Wystąpił błąd podczas wysyłania wiadomości na adres %s:%s" % (email, sendmail_status))
 smtp_obj.quit()
