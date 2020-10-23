@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 
 def start():
     print("Witaj w programie Fibonacci.")
