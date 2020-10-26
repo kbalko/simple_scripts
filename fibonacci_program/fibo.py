@@ -13,7 +13,7 @@ def input_n():
     start = input("\nWprowadź liczbę całkowitą: ")
     try:
         n = int(start)
-        if n >= 0:
+        if n > 0:
             output = "{} liczba ciągu Fibonnaciego to {}. " \
                     "\nW przedziale od 0 do {} jest {} liczb ciągu Fibonacciego. ".format(n, fib2(n), n, fib(n))
             return output
@@ -42,6 +42,6 @@ def fib2(n):
 
 
 if __name__ == "__main__":
-    print(start())
+    start()
 
 
